@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/Generales/ObtenerCaptcha" path="/api/Generales/ObtenerCaptcha" id="17c7439c-facb-42c4-b8a8-b954c6d2c84d" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="17c7439c-facb-42c4-b8a8-b954c6d2c84dfileName">%2Fapi%2FGenerales%2FObtenerCaptcha</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Generales_ObtenerCaptcha" id="fa4d6ac8-ca20-4a61-a71a-402c3c0af45f" method="POST">
+    <con:description>Genera un codigo Captcha</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>IP</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Direccion IP de la maquina del cliente</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "ResultadoProceso" : 0,
+  "DescripcionServicio" : {
+    "Codigo" : "string",
+    "Mensaje" : "string",
+    "Contexto" : "string",
+    "DetalleError" : "string"
+  },
+  "Objeto" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<?xml version='1.1' encoding='UTF-8'?><ContextoResultadoDTO[String]><ResultadoProceso>0</ResultadoProceso><ServiceDTO><Codigo>string</Codigo><Mensaje>string</Mensaje><Contexto>string</Contexto><DetalleError>string</DetalleError></ServiceDTO><Objeto>string</Objeto></ContextoResultadoDTO[String]>]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="565d1a82-3042-4709-9e88-7af29a05fa55" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://148.198.229.21:8096</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="2f1cbad1-5aa0-44b2-9bc4-77f17a250591">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

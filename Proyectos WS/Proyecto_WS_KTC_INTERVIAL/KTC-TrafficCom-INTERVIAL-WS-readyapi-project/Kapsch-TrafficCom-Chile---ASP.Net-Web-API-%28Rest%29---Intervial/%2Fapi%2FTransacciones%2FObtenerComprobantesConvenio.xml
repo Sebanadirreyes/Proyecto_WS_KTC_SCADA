@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/Transacciones/ObtenerComprobantesConvenio" path="/api/Transacciones/ObtenerComprobantesConvenio" id="9a6f8ec8-cf77-498b-953c-b7462e0617b8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9a6f8ec8-cf77-498b-953c-b7462e0617b8fileName">%2Fapi%2FTransacciones%2FObtenerComprobantesConvenio</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Transacciones_ObtenerComprobantesConvenio" id="c550a636-b853-4eae-a33a-e26c1c379051" method="POST">
+    <con:description>Permite obtener los últimos documentos de un convenio, filtrando la cantidad</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>CodigoSesion</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Código de Sesión del cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>IP</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Ip del Cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>CantidadRegistros</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Cantidad de registros a mostrar</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>ImprimirCSV</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>boolean</con:dataType>
+        <con:description>Flag para imprimir archivo Excel.CSV</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>CodigoConvenio</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Codigo del convenio</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "ResultadoProceso" : 0,
+  "DescripcionServicio" : {
+    "Codigo" : "string",
+    "Mensaje" : "string",
+    "Contexto" : "string",
+    "DetalleError" : "string"
+  },
+  "Objeto" : [ {
+    "TipoComprobante" : "string",
+    "NumeroComprobante" : 0,
+    "TipoComprobanteFiscal" : "string",
+    "NumeroComprobanteFiscal" : 0,
+    "FechaEmision" : "2015-07-20T15:49:04-07:00",
+    "FechaVencimiento" : "2015-07-20T15:49:04-07:00",
+    "PeriodoInicial" : "2015-07-20T15:49:04-07:00",
+    "PeriodoFinal" : "2015-07-20T15:49:04-07:00",
+    "TotalComprobante" : 0,
+    "TotalAPagar" : 0,
+    "Saldo" : 0,
+    "EstadoPago" : "string",
+    "FechaHoraPago" : "2015-07-20T15:49:04-07:00",
+    "FechaTopePago" : "2015-07-20T15:49:04-07:00",
+    "EmpresaPrestariaServicio" : "string",
+    "ServicioPrestado" : "string",
+    "ConDetalle" : 0
+  } ]
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<?xml version='1.1' encoding='UTF-8'?><ContextoResultadoDTO[List[ComprobanteDTO]]]]>><![CDATA[<ResultadoProceso>0</ResultadoProceso><ServiceDTO><Codigo>string</Codigo><Mensaje>string</Mensaje><Contexto>string</Contexto><DetalleError>string</DetalleError></ServiceDTO><ComprobanteDTO><TipoComprobante>string</TipoComprobante><NumeroComprobante>0</NumeroComprobante><TipoComprobanteFiscal>string</TipoComprobanteFiscal><NumeroComprobanteFiscal>0</NumeroComprobanteFiscal><FechaEmision>2015-07-20T15:49:04-07:00</FechaEmision><FechaVencimiento>2015-07-20T15:49:04-07:00</FechaVencimiento><PeriodoInicial>2015-07-20T15:49:04-07:00</PeriodoInicial><PeriodoFinal>2015-07-20T15:49:04-07:00</PeriodoFinal><TotalComprobante>0</TotalComprobante><TotalAPagar>0</TotalAPagar><Saldo>0</Saldo><EstadoPago>string</EstadoPago><FechaHoraPago>2015-07-20T15:49:04-07:00</FechaHoraPago><FechaTopePago>2015-07-20T15:49:04-07:00</FechaTopePago><EmpresaPrestariaServicio>string</EmpresaPrestariaServicio><ServicioPrestado>string</ServicioPrestado><ConDetalle>0</ConDetalle></ComprobanteDTO></ContextoResultadoDTO[List[ComprobanteDTO]]]]>><![CDATA[]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="ddcc19b3-90b2-4c49-8bb4-d8135f28caa5" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://148.198.229.21:8096</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="2f1cbad1-5aa0-44b2-9bc4-77f17a250591">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/ValidarDatos/GenerarClave" path="/api/ValidarDatos/GenerarClave" id="113dd30f-0e8b-4128-b56c-bcd458fb7e7f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="113dd30f-0e8b-4128-b56c-bcd458fb7e7ffileName">%2Fapi%2FValidarDatos%2FGenerarClave</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="ValidarDatos_GenerarClave" id="def020b7-6bc5-4db6-8af4-a4be594d593f" method="POST">
+    <con:description>Genera la Clave de Acceso de un Cliente</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>IP</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Direccion IP de la maquina del cliente*</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>NumeroDocumento</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>RUT del Cliente*</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Patente</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Patente del Vehiculo</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>DVPatente</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Digito verificador de la patente*</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Captcha</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Codigo Captcha</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>TelefonoCelular</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Telefono Celular*</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>TelefonoParticular</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Telefono Particular</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Email</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Email del Cliente*</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "ResultadoProceso" : 0,
+  "DescripcionServicio" : {
+    "Codigo" : "string",
+    "Mensaje" : "string",
+    "Contexto" : "string",
+    "DetalleError" : "string"
+  },
+  "Objeto" : true
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<?xml version='1.1' encoding='UTF-8'?><ContextoResultadoDTO[Boolean]><ResultadoProceso>0</ResultadoProceso><ServiceDTO><Codigo>string</Codigo><Mensaje>string</Mensaje><Contexto>string</Contexto><DetalleError>string</DetalleError></ServiceDTO><Objeto>true</Objeto></ContextoResultadoDTO[Boolean]>]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="aac6ebcf-34e4-4092-a4ed-948abc68adcf" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://148.198.229.21:8096</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="2f1cbad1-5aa0-44b2-9bc4-77f17a250591">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

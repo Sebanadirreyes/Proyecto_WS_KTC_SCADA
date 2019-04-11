@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/Generales/ObtenerTiposConvenios" path="/api/Generales/ObtenerTiposConvenios" id="035434c3-1025-4f3f-9bdf-e29a068a6b28" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="035434c3-1025-4f3f-9bdf-e29a068a6b28fileName">%2Fapi%2FGenerales%2FObtenerTiposConvenios</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Generales_ObtenerTiposConvenios" id="4846b741-1f41-4f64-9b17-adfdad0121e6" method="POST">
+    <con:description>Permite obtener los Tipos de Convenio</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>IP</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Ip del Cliente</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "ResultadoProceso" : 0,
+  "DescripcionServicio" : {
+    "Codigo" : "string",
+    "Mensaje" : "string",
+    "Contexto" : "string",
+    "DetalleError" : "string"
+  },
+  "Objeto" : [ {
+    "CodigoTipoConvenio" : 0,
+    "Descripcion" : "string"
+  } ]
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<?xml version='1.1' encoding='UTF-8'?><ContextoResultadoDTO[List[ConvenioTipoDTO]]]]>><![CDATA[<ResultadoProceso>0</ResultadoProceso><ServiceDTO><Codigo>string</Codigo><Mensaje>string</Mensaje><Contexto>string</Contexto><DetalleError>string</DetalleError></ServiceDTO><ConvenioTipoDTO><CodigoTipoConvenio>0</CodigoTipoConvenio><Descripcion>string</Descripcion></ConvenioTipoDTO></ContextoResultadoDTO[List[ConvenioTipoDTO]]]]>><![CDATA[]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="48d2af99-a6d3-4184-b1a7-5832ab5cebb1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://148.198.229.21:8096</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="2f1cbad1-5aa0-44b2-9bc4-77f17a250591">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

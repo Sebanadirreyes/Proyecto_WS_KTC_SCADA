@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/Transacciones/ObtenerTransitos" path="/api/Transacciones/ObtenerTransitos" id="0b002736-cd12-4a29-8c63-9ea6f9e67aed" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0b002736-cd12-4a29-8c63-9ea6f9e67aedfileName">%2Fapi%2FTransacciones%2FObtenerTransitos</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Transacciones_ObtenerTransitos" id="fe22f792-3957-4dca-b73f-619ae4376649" method="POST">
+    <con:description>Permite obtener los transitos de un cliente</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>CodigoSesion</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Código de Sesión del cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>IP</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Ip del Cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>CodigoConvenio</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Codigo del convenio</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>FechaDesde</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Fecha Desde</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>FechaHasta</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>FechaHasta</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>TipoComprobanteFiscal</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Tipo de Comprobante Fiscal</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>NumeroComprobanteFiscal</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Numero de Comprobante Fiscal</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Patente</con:name>
+        <con:style>QUERY</con:style>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>CantidadRegistros</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Facturado</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>ImprimirCSV</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>boolean</con:dataType>
+        <con:description>Flag para imprimir archivo Excel.CSV</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "ResultadoProceso" : 0,
+  "DescripcionServicio" : {
+    "Codigo" : "string",
+    "Mensaje" : "string",
+    "Contexto" : "string",
+    "DetalleError" : "string"
+  },
+  "Objeto" : [ {
+    "FechaHora" : "2015-07-20T15:49:04-07:00",
+    "Plaza" : "string",
+    "PuntoCobro" : "string",
+    "Via" : 0,
+    "Sentido" : "string",
+    "Patente" : "string",
+    "PatenteCategoria" : 0,
+    "CategoriaDescripcion" : "string",
+    "Monto" : 0,
+    "TipoVehiculo" : "string",
+    "ContractSerialNumber" : 0,
+    "TipoComprobanteFiscal" : "string",
+    "NumeroComprobanteFiscal" : "string",
+    "TipoHorario" : "string",
+    "TipoTarifa" : "string",
+    "Observacion" : "string",
+    "Facturado" : true
+  } ]
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<?xml version='1.1' encoding='UTF-8'?><ContextoResultadoDTO[List[TransaccionDTO]]]]>><![CDATA[<ResultadoProceso>0</ResultadoProceso><ServiceDTO><Codigo>string</Codigo><Mensaje>string</Mensaje><Contexto>string</Contexto><DetalleError>string</DetalleError></ServiceDTO><TransaccionDTO><FechaHora>2015-07-20T15:49:04-07:00</FechaHora><Plaza>string</Plaza><PuntoCobro>string</PuntoCobro><Via>0</Via><Sentido>string</Sentido><Patente>string</Patente><PatenteCategoria>0</PatenteCategoria><CategoriaDescripcion>string</CategoriaDescripcion><Monto>0</Monto><TipoVehiculo>string</TipoVehiculo><ContractSerialNumber>0</ContractSerialNumber><TipoComprobanteFiscal>string</TipoComprobanteFiscal><NumeroComprobanteFiscal>string</NumeroComprobanteFiscal><TipoHorario>string</TipoHorario><TipoTarifa>string</TipoTarifa><Observacion>string</Observacion><Facturado>true</Facturado></TransaccionDTO></ContextoResultadoDTO[List[TransaccionDTO]]]]>><![CDATA[]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="06b0f6a1-22de-4d7a-b59e-1835303d9f44" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://148.198.229.21:8096</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="2f1cbad1-5aa0-44b2-9bc4-77f17a250591">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

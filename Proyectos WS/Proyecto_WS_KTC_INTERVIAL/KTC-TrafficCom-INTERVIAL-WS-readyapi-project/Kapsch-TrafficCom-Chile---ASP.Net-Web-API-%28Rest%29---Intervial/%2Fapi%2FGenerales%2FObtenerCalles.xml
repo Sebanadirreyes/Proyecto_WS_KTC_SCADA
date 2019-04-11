@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/Generales/ObtenerCalles" path="/api/Generales/ObtenerCalles" id="789dc329-2e52-40f2-84b2-e2753b082db4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="789dc329-2e52-40f2-84b2-e2753b082db4fileName">%2Fapi%2FGenerales%2FObtenerCalles</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Generales_ObtenerCalles" id="1da924bb-5d7f-45f7-b2fa-c323c974634d" method="POST">
+    <con:description>Permite obtener las Calles</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>IP</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Ip del Cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>CodigoRegion</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Codigo de la Region</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>CodigoComuna</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Codigo de la Comuna</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "ResultadoProceso" : 0,
+  "DescripcionServicio" : {
+    "Codigo" : "string",
+    "Mensaje" : "string",
+    "Contexto" : "string",
+    "DetalleError" : "string"
+  },
+  "Objeto" : [ {
+    "CodigoCalle" : 0,
+    "Descripcion" : "string",
+    "TipoCalle" : "string"
+  } ]
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<?xml version='1.1' encoding='UTF-8'?><ContextoResultadoDTO[List[CalleDTO]]]]>><![CDATA[<ResultadoProceso>0</ResultadoProceso><ServiceDTO><Codigo>string</Codigo><Mensaje>string</Mensaje><Contexto>string</Contexto><DetalleError>string</DetalleError></ServiceDTO><CalleDTO><CodigoCalle>0</CodigoCalle><Descripcion>string</Descripcion><TipoCalle>string</TipoCalle></CalleDTO></ContextoResultadoDTO[List[CalleDTO]]]]>><![CDATA[]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="42b1abd9-880b-49cc-b01d-e255b8e6f7a2" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://148.198.229.21:8096</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="2f1cbad1-5aa0-44b2-9bc4-77f17a250591">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

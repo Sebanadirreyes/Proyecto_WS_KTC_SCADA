@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/Generales/ObtenerSubTiposOrdenesServicios" path="/api/Generales/ObtenerSubTiposOrdenesServicios" id="fa23906d-3973-4e00-9ae3-72faeb4dd366" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="fa23906d-3973-4e00-9ae3-72faeb4dd366fileName">%2Fapi%2FGenerales%2FObtenerSubTiposOrdenesServicios</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Generales_ObtenerSubTiposOrdenesServicios" id="3a126321-9783-455e-9971-0718bb9beb54" method="POST">
+    <con:description>Permite obtener los Sub Tipos de Ordenes de Servicios</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>IP</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Ip del Cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>TipoOrdenServicio</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Tipo Orden de Servicio</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "ResultadoProceso" : 0,
+  "DescripcionServicio" : {
+    "Codigo" : "string",
+    "Mensaje" : "string",
+    "Contexto" : "string",
+    "DetalleError" : "string"
+  },
+  "Objeto" : [ {
+    "SubTipoOrdenServicio" : 0,
+    "Descripcion" : "string"
+  } ]
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<?xml version='1.1' encoding='UTF-8'?><ContextoResultadoDTO[List[SubTipoOrdenServicioDTO]]]]>><![CDATA[<ResultadoProceso>0</ResultadoProceso><ServiceDTO><Codigo>string</Codigo><Mensaje>string</Mensaje><Contexto>string</Contexto><DetalleError>string</DetalleError></ServiceDTO><SubTipoOrdenServicioDTO><SubTipoOrdenServicio>0</SubTipoOrdenServicio><Descripcion>string</Descripcion></SubTipoOrdenServicioDTO></ContextoResultadoDTO[List[SubTipoOrdenServicioDTO]]]]>><![CDATA[]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="68cacc4b-593f-41a3-a329-85ae0599a3ba" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://148.198.229.21:8096</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="2f1cbad1-5aa0-44b2-9bc4-77f17a250591">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

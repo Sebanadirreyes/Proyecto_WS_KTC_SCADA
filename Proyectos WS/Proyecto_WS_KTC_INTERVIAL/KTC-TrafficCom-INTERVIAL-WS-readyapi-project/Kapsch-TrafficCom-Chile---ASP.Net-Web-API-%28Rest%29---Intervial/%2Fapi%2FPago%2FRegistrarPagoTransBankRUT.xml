@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/Pago/RegistrarPagoTransBankRUT" path="/api/Pago/RegistrarPagoTransBankRUT" id="4a402d66-c6fd-4db5-8b14-4f616a6f7f9f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4a402d66-c6fd-4db5-8b14-4f616a6f7f9ffileName">%2Fapi%2FPago%2FRegistrarPagoTransBankRUT</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Pago_RegistrarPagoTransBankRUT" id="479ea9b2-6258-4339-a2fa-b20e99f2a018" method="POST">
+    <con:description>Registrar Pago TransBank RUT</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>NumeroDocumento</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>RUT del cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>IP</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Direccion IP de la maquina del cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Captcha</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Codigo Captcha</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>TipoComprobanteFiscal</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Tipo Comprobante Fiscal</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>NumeroComprobanteFiscal</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Numero Comprobante Fiscal</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>OrdenCompra</con:name>
+        <con:style>QUERY</con:style>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>TipoTransaccion</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Tipo Transaccion</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Respuesta</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Respuesta</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>CodigoAutorizacion</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Codigo de Autorizacion</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>FinalNumeroTarjeta</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Final Numero de Tarjeta</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>FechaTransaccion</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Fecha Transaccion</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>HoraTransaccion</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Hora Transaccion</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>FechaContable</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Fecha Contable</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>IDSesion</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>ID de Sesion TBK</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>IDTransaccion</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>ID Transaccion TBK</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>TipoPago</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Tipo de Pago</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>NumeroCuotas</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Numero Cuotas</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>VCI</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>VCI</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>MAC</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>MAC</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Importe</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Monto de pago</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "ResultadoProceso" : 0,
+  "DescripcionServicio" : {
+    "Codigo" : "string",
+    "Mensaje" : "string",
+    "Contexto" : "string",
+    "DetalleError" : "string"
+  },
+  "Objeto" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<?xml version='1.1' encoding='UTF-8'?><ContextoResultadoDTO[String]><ResultadoProceso>0</ResultadoProceso><ServiceDTO><Codigo>string</Codigo><Mensaje>string</Mensaje><Contexto>string</Contexto><DetalleError>string</DetalleError></ServiceDTO><Objeto>string</Objeto></ContextoResultadoDTO[String]>]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="9aceab5c-4fc9-4e46-8731-8c39ea724462" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://148.198.229.21:8096</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="2f1cbad1-5aa0-44b2-9bc4-77f17a250591">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

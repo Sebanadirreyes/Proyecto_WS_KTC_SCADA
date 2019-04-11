@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/Convenios/ObtenerConvenios" path="/api/Convenios/ObtenerConvenios" id="e1135e90-e67a-4a8d-bf3b-55e373746d26" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e1135e90-e67a-4a8d-bf3b-55e373746d26fileName">%2Fapi%2FConvenios%2FObtenerConvenios</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Convenios_ObtenerConvenios" id="562ac332-30f2-40e7-9147-fea541940665" method="POST">
+    <con:description>Permite obtener los convenios de un cliente</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>CodigoSesion</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Código de Sesión del cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>IP</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Ip del Cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>ImprimirCSV</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>boolean</con:dataType>
+        <con:description>Flag para imprimir archivo Excel.CSV</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CodigoTipoConvenio</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Codigo Tipo Convenio</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "ResultadoProceso" : 0,
+  "DescripcionServicio" : {
+    "Codigo" : "string",
+    "Mensaje" : "string",
+    "Contexto" : "string",
+    "DetalleError" : "string"
+  },
+  "Objeto" : [ {
+    "CodigoConvenio" : 0,
+    "NumeroConvenio" : "string",
+    "TipoConvenio" : "string",
+    "SuscritoListaBlanca" : true,
+    "FechaAltaListaBlanca" : "2015-07-20T15:49:04-07:00"
+  } ]
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<?xml version='1.1' encoding='UTF-8'?><ContextoResultadoDTO[List[ConvenioDTO]]]]>><![CDATA[<ResultadoProceso>0</ResultadoProceso><ServiceDTO><Codigo>string</Codigo><Mensaje>string</Mensaje><Contexto>string</Contexto><DetalleError>string</DetalleError></ServiceDTO><ConvenioDTO><CodigoConvenio>0</CodigoConvenio><NumeroConvenio>string</NumeroConvenio><TipoConvenio>string</TipoConvenio><SuscritoListaBlanca>true</SuscritoListaBlanca><FechaAltaListaBlanca>2015-07-20T15:49:04-07:00</FechaAltaListaBlanca></ConvenioDTO></ContextoResultadoDTO[List[ConvenioDTO]]]]>><![CDATA[]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="1241297a-c837-47e2-a121-24477aec741b" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://148.198.229.21:8096</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://148.198.229.21/api/Convenios/ObtenerConvenios</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:jmsPropertyConfig/>
+      <con:parameters>
+        <entry key="CodigoSesion" value="123" xmlns="http://eviware.com/soapui/config"/>
+      </con:parameters>
+      <con:environmentSpec>
+        <con:entry environmentId="2f1cbad1-5aa0-44b2-9bc4-77f17a250591">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

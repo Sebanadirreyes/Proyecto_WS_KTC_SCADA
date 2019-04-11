@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/OrdenServicio/ObtenerHistoricoOrdenServicio" path="/api/OrdenServicio/ObtenerHistoricoOrdenServicio" id="a0370052-c65b-465d-8287-694b8bbc1faf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a0370052-c65b-465d-8287-694b8bbc1faffileName">%2Fapi%2FOrdenServicio%2FObtenerHistoricoOrdenServicio</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="OrdenServicio_ObtenerHistoricoOrdenServicio" id="d3d1de4d-4741-4cec-a007-5cd65eadc216" method="POST">
+    <con:description>Obtiene el historico de una orden de servicio</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>CodigoSesion</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Código de Sesión del cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>IP</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Ip del Cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>CodigoOrdenServicio</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Codigo Orden Servicio</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "ResultadoProceso" : 0,
+  "DescripcionServicio" : {
+    "Codigo" : "string",
+    "Mensaje" : "string",
+    "Contexto" : "string",
+    "DetalleError" : "string"
+  },
+  "Objeto" : [ {
+    "CodigoOrdenServicio" : 0,
+    "FechaHoraModificacion" : "2015-07-20T15:49:04-07:00",
+    "FechaCompromiso" : "2015-07-20T15:49:04-07:00",
+    "Estado" : "string",
+    "DescEstado" : "string"
+  } ]
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<?xml version='1.1' encoding='UTF-8'?><ContextoResultadoDTO[List[HistoricoOrdenServicioDTO]]]]>><![CDATA[<ResultadoProceso>0</ResultadoProceso><ServiceDTO><Codigo>string</Codigo><Mensaje>string</Mensaje><Contexto>string</Contexto><DetalleError>string</DetalleError></ServiceDTO><HistoricoOrdenServicioDTO><CodigoOrdenServicio>0</CodigoOrdenServicio><FechaHoraModificacion>2015-07-20T15:49:04-07:00</FechaHoraModificacion><FechaCompromiso>2015-07-20T15:49:04-07:00</FechaCompromiso><Estado>string</Estado><DescEstado>string</DescEstado></HistoricoOrdenServicioDTO></ContextoResultadoDTO[List[HistoricoOrdenServicioDTO]]]]>><![CDATA[]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="5f8bacdc-512a-4e37-b7c9-711ee08c31d4" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://148.198.229.21:8096</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="2f1cbad1-5aa0-44b2-9bc4-77f17a250591">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

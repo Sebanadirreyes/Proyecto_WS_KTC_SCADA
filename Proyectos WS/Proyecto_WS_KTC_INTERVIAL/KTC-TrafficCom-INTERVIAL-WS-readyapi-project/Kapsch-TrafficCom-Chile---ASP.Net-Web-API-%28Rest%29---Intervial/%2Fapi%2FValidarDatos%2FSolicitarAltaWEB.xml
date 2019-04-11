@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/ValidarDatos/SolicitarAltaWEB" path="/api/ValidarDatos/SolicitarAltaWEB" id="bb09980e-b731-4d41-afee-665d27426013" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="bb09980e-b731-4d41-afee-665d27426013fileName">%2Fapi%2FValidarDatos%2FSolicitarAltaWEB</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="ValidarDatos_SolicitarAltaWEB" id="26d5670f-9aa6-42be-a3e6-a8aaec712e5c" method="POST">
+    <con:description>Registra al cliente para que tenga acceso web</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>IP</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Direccion IP de la maquina del cliente*</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>NumeroDocumento</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>RUT del Cliente*</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Patente</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Patente del Vehiculo</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>DVPatente</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Digito verificador de la patente*</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Captcha</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Codigo Captcha</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>TelefonoCelular</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Telefono Celular*</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>TelefonoParticular</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Telefono Particular</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Email</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Email del Cliente*</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Clave</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Clave a crear</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>ConfirmacionClave</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>ConfirmacionClave</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "ResultadoProceso" : 0,
+  "DescripcionServicio" : {
+    "Codigo" : "string",
+    "Mensaje" : "string",
+    "Contexto" : "string",
+    "DetalleError" : "string"
+  },
+  "Objeto" : {
+    "CodigoSesion" : 0,
+    "CodigoPersona" : 0,
+    "SuscritoListaBlanca" : true
+  }
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<?xml version='1.1' encoding='UTF-8'?><ContextoResultadoDTO[SesionDTO]><ResultadoProceso>0</ResultadoProceso><ServiceDTO><Codigo>string</Codigo><Mensaje>string</Mensaje><Contexto>string</Contexto><DetalleError>string</DetalleError></ServiceDTO><SesionDTO><CodigoSesion>0</CodigoSesion><CodigoPersona>0</CodigoPersona><SuscritoListaBlanca>true</SuscritoListaBlanca></SesionDTO></ContextoResultadoDTO[SesionDTO]>]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="d3dfcf3a-6d5f-49f9-85e2-e869213295cc" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://148.198.229.21:8096</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="2f1cbad1-5aa0-44b2-9bc4-77f17a250591">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

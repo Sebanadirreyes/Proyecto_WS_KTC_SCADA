@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/Facturacion/ObtenerMedioPago" path="/api/Facturacion/ObtenerMedioPago" id="dee8f659-dfb7-4529-8aef-3792cd37ad04" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="dee8f659-dfb7-4529-8aef-3792cd37ad04fileName">%2Fapi%2FFacturacion%2FObtenerMedioPago</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Facturacion_ObtenerMedioPago" id="2fb288e6-9c22-4717-b102-64b9abcd7753" method="POST">
+    <con:description>Permite obtener los medios de pagos de un cliente</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>CodigoSesion</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Código de Sesión del cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>IP</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Ip del Cliente</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>CodigoConvenio</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Codigo del convenio</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "ResultadoProceso" : 0,
+  "DescripcionServicio" : {
+    "Codigo" : "string",
+    "Mensaje" : "string",
+    "Contexto" : "string",
+    "DetalleError" : "string"
+  },
+  "Objeto" : [ {
+    "CodigoTipoCuentaBancaria" : 0,
+    "CodigoBanco" : 0,
+    "NroCuentaBancaria" : "string",
+    "Sucursal" : "string",
+    "Confirmado" : true,
+    "TipoCuentaDescripcion" : "string",
+    "BancoDescripcion" : "string",
+    "CodigoTipoTarjetaCredito" : 0,
+    "NumeroTarjetaCredito" : "string",
+    "FechaVencimiento" : "string",
+    "CodigoEmisorTarjetaCredito" : 0,
+    "DescripcionEmisorTarjetaCredito" : "string",
+    "TipoTarjetaDescripcion" : "string"
+  } ]
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<?xml version='1.1' encoding='UTF-8'?><ContextoResultadoDTO[List[MedioPagoPACPATDTO]]]]>><![CDATA[<ResultadoProceso>0</ResultadoProceso><ServiceDTO><Codigo>string</Codigo><Mensaje>string</Mensaje><Contexto>string</Contexto><DetalleError>string</DetalleError></ServiceDTO><MedioPagoPACPATDTO><CodigoTipoCuentaBancaria>0</CodigoTipoCuentaBancaria><CodigoBanco>0</CodigoBanco><NroCuentaBancaria>string</NroCuentaBancaria><Sucursal>string</Sucursal><Confirmado>true</Confirmado><TipoCuentaDescripcion>string</TipoCuentaDescripcion><BancoDescripcion>string</BancoDescripcion><CodigoTipoTarjetaCredito>0</CodigoTipoTarjetaCredito><NumeroTarjetaCredito>string</NumeroTarjetaCredito><FechaVencimiento>string</FechaVencimiento><CodigoEmisorTarjetaCredito>0</CodigoEmisorTarjetaCredito><DescripcionEmisorTarjetaCredito>string</DescripcionEmisorTarjetaCredito><TipoTarjetaDescripcion>string</TipoTarjetaDescripcion></MedioPagoPACPATDTO></ContextoResultadoDTO[List[MedioPagoPACPATDTO]]]]>><![CDATA[]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="b41a5b22-add1-4d1c-956c-219768dfdc7d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://148.198.229.21:8096</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="2f1cbad1-5aa0-44b2-9bc4-77f17a250591">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>

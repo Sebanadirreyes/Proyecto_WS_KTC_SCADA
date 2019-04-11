@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/ValidarDatos/ObtenerDomicilio" path="/api/ValidarDatos/ObtenerDomicilio" id="353106d9-92e9-4b06-8794-f2ca2b520192" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="353106d9-92e9-4b06-8794-f2ca2b520192fileName">%2Fapi%2FValidarDatos%2FObtenerDomicilio</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="ValidarDatos_ObtenerDomicilio" id="44d3a347-7a97-484f-a426-7228d15c870e" method="POST">
+    <con:description>Obtiene los datos de domicilio un Cliente</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>CodigoSesion</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Codigo de la Sesion</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>IP</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Direccion IP de la maquina del cliente</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "ResultadoProceso" : 0,
+  "DescripcionServicio" : {
+    "Codigo" : "string",
+    "Mensaje" : "string",
+    "Contexto" : "string",
+    "DetalleError" : "string"
+  },
+  "Objeto" : {
+    "CodigoDomicilio" : 0,
+    "CodigoTipoDomicilio" : 0,
+    "CodigoPais" : "string",
+    "CodigoRegion" : "string",
+    "CodigoComuna" : "string",
+    "CodigoCalle" : 0,
+    "Numero" : "string",
+    "Piso" : 0,
+    "Dpto" : "string",
+    "CalleDesnormalizada" : "string",
+    "Detalle" : "string",
+    "CodigoPostal" : "string"
+  }
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<?xml version='1.1' encoding='UTF-8'?><ContextoResultadoDTO[DomicilioDTO]><ResultadoProceso>0</ResultadoProceso><ServiceDTO><Codigo>string</Codigo><Mensaje>string</Mensaje><Contexto>string</Contexto><DetalleError>string</DetalleError></ServiceDTO><DomicilioDTO><CodigoDomicilio>0</CodigoDomicilio><CodigoTipoDomicilio>0</CodigoTipoDomicilio><CodigoPais>string</CodigoPais><CodigoRegion>string</CodigoRegion><CodigoComuna>string</CodigoComuna><CodigoCalle>0</CodigoCalle><Numero>string</Numero><Piso>0</Piso><Dpto>string</Dpto><CalleDesnormalizada>string</CalleDesnormalizada><Detalle>string</Detalle><CodigoPostal>string</CodigoPostal></DomicilioDTO></ContextoResultadoDTO[DomicilioDTO]>]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="92337912-c34e-48eb-9049-c18733e43772" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://148.198.229.21:8096</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="2f1cbad1-5aa0-44b2-9bc4-77f17a250591">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+  </con:method>
+</con:resource>
