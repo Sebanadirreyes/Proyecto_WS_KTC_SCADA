@@ -1,1 +1,7 @@
-TestCase-1.xml
+TC_Convenios_ObtenerConvenios.xml
+TC_Convenios_ObtenerCuentas.xml
+TC_Facturacion_ObtenerMedioPago.xml
+TC_Facturacion_ObtenerMedioEnvioDocumento.xml
+TC_Facturacion_ObtenerDomicilioFacturacion.xml
+TC_Facturacion_ActualizarMedioEnvioDocumento.xml
+TC_Facturacion_ActualizarMedioPagoAutomaticoPAC.xml

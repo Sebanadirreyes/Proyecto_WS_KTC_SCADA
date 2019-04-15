@@ -57,4 +57,10 @@ Kapsch-TrafficCom-Chile---ASP.Net-Web-API-%28Rest%29---Intervial\%2Fapi%2FValida
 Kapsch-TrafficCom-Chile---ASP.Net-Web-API-%28Rest%29---Intervial\%2Fapi%2FValidarDatos%2FAltaListaBlancaRUT.xml
 Kapsch-TrafficCom-Chile---ASP.Net-Web-API-%28Rest%29---Intervial\%2Fapi%2FValidarDatos%2FAltaListaBlancaConvenio.xml
 Kapsch-TrafficCom-Chile---ASP.Net-Web-API-%28Rest%29---Intervial\%2Fapi%2FValidarDatos%2FAltaListaBlancaCuentas.xml
-TestSuite_KTC_BO_INTERVIAL\TestCase-1.xml
+TestSuite_KTC_BO_INTERVIAL\TC_Convenios_ObtenerConvenios.xml
+TestSuite_KTC_BO_INTERVIAL\TC_Convenios_ObtenerCuentas.xml
+TestSuite_KTC_BO_INTERVIAL\TC_Facturacion_ObtenerMedioPago.xml
+TestSuite_KTC_BO_INTERVIAL\TC_Facturacion_ObtenerMedioEnvioDocumento.xml
+TestSuite_KTC_BO_INTERVIAL\TC_Facturacion_ObtenerDomicilioFacturacion.xml
+TestSuite_KTC_BO_INTERVIAL\TC_Facturacion_ActualizarMedioEnvioDocumento.xml
+TestSuite_KTC_BO_INTERVIAL\TC_Facturacion_ActualizarMedioPagoAutomaticoPAC.xml

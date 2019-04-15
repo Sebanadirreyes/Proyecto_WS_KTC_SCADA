@@ -40,7 +40,7 @@
 // pw.close()
 // fos.close()</con:script>
   </con:eventHandlers>
-  <con:environment id="2f1cbad1-5aa0-44b2-9bc4-77f17a250591" name="INTERVIAL">
+  <con:environment id="f4e67d1f-9f6b-412e-a458-6df8a95eac0c" name="INTERVIAL">
     <con:service type="REST" name="Kapsch TrafficCom Chile - ASP.Net Web API (Rest) - Intervial">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://148.198.229.21:8096</con:endpoint>
     </con:service>
