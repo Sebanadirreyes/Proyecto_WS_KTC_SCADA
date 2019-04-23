@@ -2,6 +2,11 @@
 <con:testSuite id="b0f3f5e4-51cf-4c36-85b4-3856e4ba7cfa" name="TestSuite_KTC_BO_INTERVIAL" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="b0f3f5e4-51cf-4c36-85b4-3856e4ba7cfafileName">TestSuite_KTC_BO_INTERVIAL</con:setting>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:runType>SEQUENTIAL</con:runType>
